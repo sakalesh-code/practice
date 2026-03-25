@@ -33,7 +33,7 @@ public class StreamExample3 {
 //		SECUNDERABAD
 //		SALEM		
 		List<String> cities = Arrays.asList("Surat", "Shillong", "Srinagar", "Secunderabad", "Surat", "Salem");
-		cities.stream().distinct().skip(1).forEach(System.out::println);
+		cities.stream().distinct().skip(1).map(String::toUpperCase).forEach(System.out::println);
 		System.out.println();
 
 // Given a string, extract all characters, skip the first five characters, take the next 10 characters, 
@@ -54,7 +54,7 @@ public class StreamExample3 {
 //		Output:
 //		["35.090", "33.8°C", "36.5°C"]
 		double[] temps = { 28.5, 31.2, 35.0, 33.8, 31.2, 36.5, 38.0, 40.1 };
-		Object[] str = Arrays.stream(temps).filter(t -> t > 30).distinct().skip(1).limit(3).mapToObj(t -> t + "°C")
+		Object[] str = Arrays.stream(temps).filter(t -> t > 30.0).distinct().skip(1).limit(3).mapToObj(t -> t + "°C")
 				.toArray();
 		System.out.println(Arrays.toString(str));
 		System.out.println();

@@ -2,13 +2,18 @@ package com.coreJava;
 
 public class Test {
 	public static void main(String args[]) {
-		//System.out.println("hello world");
+		// System.out.println("hello world");
 		String s1 = "Hello";
-		update(s1);
-		System.out.println(s1);
+		Test t = new Test();
+		String s3 = t.update(s1);
+		System.out.println(s3);
+		String s2 = s1.concat("w");
+		System.out.println(s2);
 	}
-	static void update(String s) {
-	    s = s.concat(" World");
+
+	public String update(String s) {
+		s = s.concat(" World2");
+		return s;
 	}
 
 }

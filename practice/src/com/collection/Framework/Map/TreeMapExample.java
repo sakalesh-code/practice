@@ -1,5 +1,6 @@
 package com.collection.Framework.Map;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -7,8 +8,8 @@ import java.util.TreeMap;
 public class TreeMapExample {
 	public static void main(String[] args) {
 
-		// HashMap – Maintain Insertion Order
-		Map<Integer, String> hMap = new LinkedHashMap<>();
+		// HashMap – Doesn't guaranty Insertion Order
+		Map<Integer, String> hMap = new HashMap<>();
 		hMap.put(3, "C");
 		hMap.put(1, "A");
 		hMap.put(2, "B");

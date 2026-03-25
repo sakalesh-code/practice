@@ -9,12 +9,16 @@ public class ArrayListExample2 {
 		// Remove Duplicates (Without Set)
 		List<Integer> list = Arrays.asList(10, 20, 20, 30, 10, 40);
 		List<Integer> originalList = new ArrayList<>();
+		List<Integer> duplicateList = new ArrayList<>();
 		for (int i : list) {
 			if (!originalList.contains(i)) {
 				originalList.add(i);
+			} else {
+				duplicateList.add(i);
 			}
 		}
-		System.out.println(originalList);
+		System.out.println("original : " + originalList);
+		System.out.println("duplicate : " + duplicateList);
 
 		// Exercise 5 — Reverse List (Without Collections.reverse)
 		List<Integer> li = Arrays.asList(1, 2, 3, 4, 5);

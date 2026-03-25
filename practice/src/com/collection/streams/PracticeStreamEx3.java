@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class PracticceStreamEx3 {
+public class PracticeStreamEx3 {
 	public static void main(String[] args) {
 // 1. Find last element of list 👉 Input: [10, 20, 40, 20]
 		List<Integer> list = new ArrayList<>(Arrays.asList(10, 20, 40, 20));
@@ -48,6 +48,7 @@ public class PracticceStreamEx3 {
 		List<Employee2> employees = Arrays.asList(new Employee2("Sak", "IT"), new Employee2("Ram", "HR"),
 				new Employee2("John", "IT"), new Employee2("Anu", "Finance"));
 		System.out.println(employees.stream().collect(Collectors.groupingBy(Employee2::getDept)));
+		System.out.println(employees.stream().collect(Collectors.groupingBy(Employee2::getDept,Collectors.mapping(Employee2::getName, Collectors.toList()))));
 // 9. Sort map by values 👉 Input: {A=3, B=1, C=2} 👉 Output: {B=1, C=2, A=3}	
 		Map<String, Integer> map = new HashMap<>();
 		map.put("A", 3);

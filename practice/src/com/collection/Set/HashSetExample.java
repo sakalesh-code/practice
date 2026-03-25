@@ -31,8 +31,8 @@ public class HashSetExample {
 		// Find duplicate elements in a list using Set.Input : [10,20,30,20,40,10];
 		List<Integer> list = new ArrayList<Integer>(Arrays.asList(10, 20, 30, 20, 40, 10));
 		System.out.println("list : " + list);
-		Set<Integer> s = new HashSet<>();
-		Set<Integer> dupSet = new HashSet<>();
+		Set<Integer> s = new LinkedHashSet<>();
+		Set<Integer> dupSet = new LinkedHashSet<>();
 		for (int i : list) {
 			if (!s.add(i)) {
 				dupSet.add(i);
@@ -40,7 +40,7 @@ public class HashSetExample {
 //			if (!s.contains(i)) {
 //				s.add(i);
 //			} else {
-//				dup.add(i);
+//				dupSet.add(i);
 //			}
 		}
 		System.out.println("Set : " + s);

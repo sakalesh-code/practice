@@ -1,7 +1,6 @@
 package com.collection.List;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class LinkedListExample {
 	// ArrayList - Stores elements in a dynamically resizable array

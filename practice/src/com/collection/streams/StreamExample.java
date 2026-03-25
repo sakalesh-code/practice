@@ -39,7 +39,8 @@ public class StreamExample {
 		//String[] str = sentence.split(" ");
 		Arrays.stream(sentence.split(" "))
 			.filter(s->s.toLowerCase().startsWith("a"))
-			.sorted((w1,w2) -> w1.length()-w2.length())
+			//.sorted((w1,w2) -> w1.length()-w2.length())
+			.sorted(Comparator.comparing(String::length))
 			.map(s -> new StringBuilder(s).reverse().toString().toLowerCase())
 			.map(s->s +"-"+s.length())
 			.forEach(System.out::println);

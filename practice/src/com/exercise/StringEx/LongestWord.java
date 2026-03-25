@@ -15,7 +15,7 @@ public class LongestWord {
 				smalestWord = word;
 			}
 		}
-		System.out.println("lonest word : " + longestWord);
+		System.out.println("longest word : " + longestWord);
 		System.out.println("smallest word : " + smalestWord);
 
 	}

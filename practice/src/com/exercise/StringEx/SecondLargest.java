@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SecondLargest {
 	public static void main(String[] args) {
-		int[] arr = { 10, 20, 20, 8 };
+		int[] arr = { 10, 30, 20, 20, 8 };
 
 		// case 1
 		int largest = Integer.MIN_VALUE;

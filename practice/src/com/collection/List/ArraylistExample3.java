@@ -12,10 +12,8 @@ public class ArraylistExample3 {
 		List<Integer> list = Arrays.asList(10, 15, 20, 25, 30);
 		List<Integer> correctedList = new ArrayList<>();
 		for (int i : list) {
-
-			if (!(i % 2 == 0)) {
+			if (i % 2 != 0) {
 				correctedList.add(i);
-
 			}
 		}
 		System.out.println(correctedList);
